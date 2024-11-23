@@ -40,7 +40,7 @@
   },
   "react-scripts": {
     "build": {
-      "chunkSizeWarningLimit": 2048
+      "chunkSizeWarningLimit": 5120
     }
   }
 }

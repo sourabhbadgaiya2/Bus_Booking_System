@@ -24,7 +24,7 @@ app.use("/buses", require("./routes/BusesRoutes"));
 app.use("/bookings", require("./routes/BookingRoutes"));
 
 const path = require("path");
-
+__dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
 app.get("*", (req, res) => {

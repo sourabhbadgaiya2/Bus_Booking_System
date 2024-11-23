@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { HideLoading, ShowLoading } from "../redux/reducers/alertSlice";
-import axiosInstance from "../helpers/axios";
+import axiosInstance from "axios";
 import { message, Col, Row, Input } from "antd";
 import Bus from "../components/Bus";
-import moment from "moment";
 
 const Home = () => {
   const { user } = useSelector((state) => state.users);
@@ -24,8 +23,13 @@ const Home = () => {
     try {
       dispatch(ShowLoading());
       const response = await axiosInstance.post(
-        "/buses/get-all-buses",
-        filters
+        "http://localhost:5000/buses/get-all-buses",
+        filters,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
       dispatch(HideLoading());
 

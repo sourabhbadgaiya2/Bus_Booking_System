@@ -42,5 +42,5 @@
     "build": {
       "chunkSizeWarningLimit": 5120
     }
-  }
+  }, "proxy": "http://localhost:5000"
 }

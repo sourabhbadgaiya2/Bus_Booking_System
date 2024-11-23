@@ -23,7 +23,7 @@ const LoginPage = () => {
         message.error(response.data.message);
       }
     } catch (error) {
-      message.error(response.data.message);
+      message.error(error.message);
       dispatch(HideLoading());
     }
   };

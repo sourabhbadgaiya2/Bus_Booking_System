@@ -10,7 +10,7 @@ function DefaultLayout({ children }) {
   const userMenu = [
     { name: "Home", icon: "ri-home-line", path: "/" },
     { name: "Bookings", icon: "ri-file-list-line", path: "/bookings" },
-    { name: "Profile", icon: "ri-user-line", path: "/profile" },
+    // { name: "Profile", icon: "ri-user-line", path: "/profile" },
     { name: "Logout", icon: "ri-logout-box-line", path: "/logout" },
   ];
 

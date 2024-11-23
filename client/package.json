@@ -37,5 +37,10 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "vite": "^5.4.10"
+  },
+  "react-scripts": {
+    "build": {
+      "chunkSizeWarningLimit": 2048
+    }
   }
 }
